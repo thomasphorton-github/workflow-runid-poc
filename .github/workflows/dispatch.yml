@@ -3,7 +3,8 @@ on:
     inputs:
       runId:
         type: string
-        description: a generated runId for correlating workflows
+        required: true
+        description: a unique runId for correlating workflows
 name: Create an issue on push
 permissions:
   contents: read
