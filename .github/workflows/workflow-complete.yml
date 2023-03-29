@@ -12,4 +12,4 @@ jobs:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v3
-      - run: echo ${{ toJson(github) }}
+      - run: echo "${{ toJson(github) }}"
