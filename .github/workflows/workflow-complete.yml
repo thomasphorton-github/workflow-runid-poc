@@ -15,8 +15,8 @@ jobs:
       - run: echo "${{ toJson(github) }}"
       
       # Source workflow ID?
-      # - run: echo "${{ github.event.workflow.id }}
+      # - run: echo "${{ github.event.workflow.id }}"
       
       # data from triggering flow?
       # https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#using-data-from-the-triggering-workflow
-      - run: echo "${{ toJson(github.event) }}
+      - run: echo "${{ toJson(github.event) }}"
