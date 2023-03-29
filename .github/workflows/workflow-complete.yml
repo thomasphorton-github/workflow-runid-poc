@@ -12,5 +12,7 @@ jobs:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v3
+      - run: sudo apt install jq -y
       - run: echo "${{ github.event }}"
+      - run: echo jq ${{ github.event }}
       
