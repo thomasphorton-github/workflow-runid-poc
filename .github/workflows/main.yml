@@ -1,4 +1,9 @@
-on: [workflow_dispatch]
+on: 
+  workflow_dispatch:
+    inputs:
+      runId:
+        type: string
+        description: a generated runId for correlating workflows
 name: Create an issue on push
 permissions:
   contents: read
