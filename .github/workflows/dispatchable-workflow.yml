@@ -1,3 +1,7 @@
+name: Dispatchable Workflow
+permissions:
+  contents: read
+  issues: write 
 on: 
   workflow_dispatch:
     inputs:
@@ -5,10 +9,6 @@ on:
         type: string
         required: true
         description: a unique runId for correlating workflows
-name: Create an issue on push
-permissions:
-  contents: read
-  issues: write 
 jobs:
   stuff:
     runs-on: ubuntu-latest
