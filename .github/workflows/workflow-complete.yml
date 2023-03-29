@@ -15,4 +15,6 @@ jobs:
       - run: echo "${{ toJson(github) }}"
       
       # Source workflow ID?
-      - run: echo "${{ github.event.workflow.id }}
+      # - run: echo "${{ github.event.workflow.id }}
+      
+      - run: echo "${{ toJson(github.event) }}
