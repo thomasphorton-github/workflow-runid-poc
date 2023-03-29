@@ -1,0 +1,15 @@
+# https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#workflow_run
+
+on:
+  workflow_run:
+    workflows: [Dispatchable Workflow]
+    types:
+      - completed
+jobs:
+  stuff:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - run: gh issue create --title "Workflow complete" --body "{{github.event.inputs}}"
+      
