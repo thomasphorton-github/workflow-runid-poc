@@ -12,5 +12,5 @@ jobs:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v3
-      - run: echo "${{ github.event.inputs }}"
+      - run: echo "${{ github.event }}"
       
