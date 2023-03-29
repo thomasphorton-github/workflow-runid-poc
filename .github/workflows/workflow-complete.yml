@@ -13,3 +13,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: echo "${{ toJson(github) }}"
+      
+      # Source workflow ID?
+      - run: echo "${{ github.event.workflow.id }}
